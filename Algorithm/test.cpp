@@ -4,9 +4,9 @@
 
 void main()
 {
-	vector<int>a = { 2,4,10,14,7,9,3,2,8,1 };
+	vector<int>a = {16,14,10,8,7,9,3,2,4,1};
 	Heap *heap = new Heap(a);
-	heap->build_max_heap();
+	heap->heap_sort();
 	for (auto i : heap->heap_vector)
 		cout << i << " ";
 	cout << endl;

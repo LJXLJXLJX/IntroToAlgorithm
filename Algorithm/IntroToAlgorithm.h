@@ -50,6 +50,8 @@ public:
 	int max_heapify(int index);
 	//构建最大堆
 	int build_max_heap();
+	//堆排序
+	int heap_sort();
 
 	//堆尺寸
 	int heap_size;
