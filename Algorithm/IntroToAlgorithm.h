@@ -4,7 +4,9 @@
 #include <vector>
 #include <cmath>
 #include <limits>
+
 using namespace std;
+
 
 
 
@@ -40,7 +42,12 @@ vector<vector<int>> matrix_add(vector<vector<int>> A, vector<vector<int>> B);
 vector<vector<int>> square_matrix_multiply_recursive(vector<vector<int>> A, vector<vector<int>> B);
 
 
-//第六章 堆
+//第六章 堆 
+/*
+只实现了最大堆相关算法
+最小堆无非就是照搬套路，改个大于小于 
+懒得弄了，以后有需要再补上
+*/
 class Heap {
 public:
 	Heap(const vector<int> &arr);
@@ -52,6 +59,12 @@ public:
 	int build_max_heap();
 	//堆排序
 	int heap_sort();
+	//最大堆去掉并返回最大值
+	int heap_extract_max();
+	//增大最大堆某元素
+	int heap_increase_key(int index, int key);
+	//最大堆插入元素
+	int max_heap_insert(int key);
 
 	//堆尺寸
 	int heap_size;
@@ -61,6 +74,8 @@ public:
 	int left;
 	//当前索引右索引
 	int right;
+	//当前索引父索引
+	int parent;
 	//当前层数
 	int depth;
 	//堆对应的vector
