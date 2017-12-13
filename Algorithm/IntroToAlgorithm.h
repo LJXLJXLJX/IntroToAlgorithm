@@ -4,6 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <limits>
+#include <random>
 
 using namespace std;
 
@@ -81,4 +82,24 @@ public:
 	//堆对应的vector
 	vector<int> heap_vector;
 };
+
+//第七章快速排序
+/*
+这里要非常注意“划分”这个词非常容易引起误导
+划分一个数组，很容易把这种操作理解为把一根棍子撇成两半
+但是在此处 数组元素的整个顺序都被打乱了 这根棍子被彻底分解重组了 而不是简单的划分成两半
+打乱之后按一个阈值（也是一个数组元素，此处取的是最后一个元素）隔离开来
+所以 应该管他叫“重组隔离”之类的更合理
+*/
+//返回值为阈值的新位置
+int partition(vector<int> &arr, int p, int r);
+
+//快速排序
+int quick_sort(vector<int> &arr, int p, int r);
+//生成[a,b]的随机整数
+int randint(int a, int b);
+//随机partition 随机取阈值，而不是最后一个了
+int random_partition(vector<int> &arr, int p, int r);
+//随机快速分类 基于随机partition
+int random_quick_sort(vector<int> &arr, int p, int r);
 

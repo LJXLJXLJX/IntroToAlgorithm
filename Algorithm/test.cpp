@@ -4,11 +4,13 @@
 
 void main()
 {
-	vector<int>a = {16,14,10,8,7,9,3,2,4,1};
-	Heap *heap = new Heap(a);
-	heap->max_heap_insert(11);
-	for (auto i : heap->heap_vector)
+	vector<int>a = { 2,8,7,1,3,5,6,4 };
+	int b = random_quick_sort(a, 0, 7);
+	for (auto i : a)
+	{
 		cout << i << " ";
+	}
 	cout << endl;
+
 	system("pause");
 }
