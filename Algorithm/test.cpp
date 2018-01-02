@@ -1,12 +1,13 @@
-#include "stdafx.h"
+#pragma once
 #include "IntroToAlgorithm.h"
 
 
 void main()
 {
-	vector<int>a = { 2,8,7,1,3,5,6,4 };
-	int b = random_quick_sort(a, 0, 7);
-	for (auto i : a)
+	vector<int>a = { 1,0,1,1};
+	vector<int>b = { 1,1,1,1};
+	auto c = binary_add(a, b);
+	for (auto i : c)
 	{
 		cout << i << " ";
 	}
