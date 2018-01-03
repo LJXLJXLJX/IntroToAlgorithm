@@ -4,14 +4,13 @@
 
 void main()
 {
-	vector<int>a = { 1,0,1,1};
-	vector<int>b = { 1,1,1,1};
-	auto c = binary_add(a, b);
-	for (auto i : c)
+	vector<double> a = { 6.6,2.3,6,1,2,8.88,9.3,2.5,3 };
+	random_quick_sort(a, 0, 8);
+	for (auto i : a)
 	{
-		cout << i << " ";
+		cout << i << '\t';
 	}
-	cout << endl;
 
+	cout << endl;
 	system("pause");
 }
